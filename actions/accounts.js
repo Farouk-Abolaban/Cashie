@@ -66,7 +66,7 @@ export async function updateDefaultAccount(accountId) {
   
     if (!user) throw new Error("User not found");
   
-    const account = await db.account.findUnique({
+    const account = await db.account.findFirst({
       where: {
         id: accountId,
         userId: user.id,
@@ -84,7 +84,7 @@ export async function updateDefaultAccount(accountId) {
     if (!account) return null;
   
     return {
-      ...serializeDecimal(account),
-      transactions: account.transactions.map(serializeDecimal),
+      ...serializeTransaction(account),
+      transactions: account.transactions.map(serializeTransaction),
     };
   }
