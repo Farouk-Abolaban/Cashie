@@ -4,7 +4,11 @@ import TransactionTable from "../_components/transaction-table";
 import { BarLoader } from "react-spinners";
 import AccountChart from "../_components/account-chart";
 
-const AccountsPage = async ({ params }) => {
+export default async function AccountPage({ params }) {
+  if (!params?.id) {
+    notFound(); // Prevent using undefined params
+  }
+
   const accountData = await getAccountWithTransactions(params.id);
 
   if (!accountData) {
@@ -51,6 +55,4 @@ const AccountsPage = async ({ params }) => {
       </Suspense>
     </div>
   );
-};
-
-export default AccountsPage;
+}
