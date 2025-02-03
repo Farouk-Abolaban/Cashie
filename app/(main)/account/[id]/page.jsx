@@ -5,9 +5,11 @@ import { BarLoader } from "react-spinners";
 import AccountChart from "../_components/account-chart";
 
 export default async function AccountPage({ params }) {
-  if (!params?.id) {
-    notFound(); // Prevent using undefined params
+  if (!params || !params.id) {
+    notFound();
   }
+
+  const accountId = params.id;
 
   const accountData = await getAccountWithTransactions(params.id);
 
