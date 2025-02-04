@@ -22,6 +22,7 @@ const aj = arcjet({
         "FACEBOOK_CRAWLER",
         "FACEBOOK_SHARE_CRAWLER",
         "TWITTER_CRAWLER",
+        "LINKEDIN_CRAWLER",
       ],
     }),
   ],
