@@ -29,6 +29,7 @@ import { cn } from "@/lib/utils";
 import { createTransaction, updateTransaction } from "@/actions/transaction";
 import { transactionSchema } from "@/app/lib/schema";
 import CreateAccountDrawer from "@/components/create-account-drawer";
+import { ReceiptScanner } from "./receipt-scanner";
 
 export function AddTransactionForm({
   accounts,
@@ -129,6 +130,9 @@ export function AddTransactionForm({
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+      {/* Receipt Scanner */}
+      <ReceiptScanner onScanComplete={handleScanComplete} />
+
       {/* Amount and Account */}
       <div className="space-y-2">
         <label className="text-sm font-medium">Type</label>
