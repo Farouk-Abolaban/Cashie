@@ -16,7 +16,13 @@ const aj = arcjet({
     }),
     detectBot({
       mode: "LIVE",
-      allow: ["CATEGORY:SEARCH_ENGINE", "GO_HTTP"],
+      allow: [
+        "CATEGORY:SEARCH_ENGINE",
+        "GO_HTTP",
+        "FACEBOOK_CRAWLER",
+        "FACEBOOK_SHARE_CRAWLER",
+        "TWITTER_CRAWLER",
+      ],
     }),
   ],
 });
