@@ -1,5 +1,7 @@
 # 🏦 Cashie
 
+**App is deployed here:** [Cashie](https://cashie-rvr1.vercel.app/)
+
 **AI-Powered Finance Tracker & Advisor**  
 
 Cashie is an AI-driven finance platform that helps you track your income and expenses while providing personalized financial advice. It includes features like automatic receipt scanning, budget alerts, and monthly AI-driven financial insights.  
