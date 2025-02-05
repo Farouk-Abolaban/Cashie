@@ -1,36 +1,132 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🏦 Cashie
 
-## Getting Started
+**AI-Powered Finance Tracker & Advisor**  
 
-First, run the development server:
+Cashie is an AI-driven finance platform that helps you track your income and expenses while providing personalized financial advice. It includes features like automatic receipt scanning, budget alerts, and monthly AI-driven financial insights.  
+
+## 🚀 Features  
+
+- 📸 **AI Receipt Scanner** – Upload receipts, and Cashie will automatically extract transaction details.  
+- 📊 **Budget Alerts** – Get notified when you're close to exceeding your budget.  
+- 🧠 **AI Financial Advisor** – Receive monthly AI-generated insights on saving and optimizing expenses.  
+
+## 🛠 Tech Stack  
+
+- **Frontend:** [Next.js](https://nextjs.org/) + [Tailwind CSS](https://tailwindcss.com/) + [Shadcn UI](https://ui.shadcn.com/)  
+- **Backend:** [Supabase](https://supabase.com/) + [Prisma](https://www.prisma.io/) + [ArcJet](https://arcjet.com/)  
+- **Event Handling:** [Inngest](https://www.inngest.com/)  
+
+## 📸 Screenshots  
+
+### Homescreen 
+![Homescreen Screenshot](screenshots/home.png)
+
+### Dashboard View  
+![Dashboard Screenshot](screenshots/dashboard.png)
+
+### Add a transaction + AI Receipt Scanner
+![Add Transaction](screenshots/transaction.png)
+
+### Budget Alert Email  
+![Budget Alert](screenshots/budget.png)
+
+### Monthly Recap AI Insights
+![Monthly Recap](screenshots/insights.png)
+
+
+## 🏗 Installation & Setup  
+
+### Prerequisites  
+
+Ensure you have the following installed:  
+
+- [Node.js](https://nodejs.org/) (LTS recommended)  
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)  
+- [Supabase CLI](https://supabase.com/docs/guides/cli) (for local database setup, if needed)  
+
+### 1️⃣ Clone the Repository  
+
+```bash
+git clone https://github.com/yourusername/cashie.git
+cd cashie
+```
+
+### 2️⃣ **Install Dependencies**
+
+Using npm: 
+```bash
+npm install
+```
+
+Or using yarn: 
+```bash
+yarn install
+```
+
+### 3️⃣ Set Up Environment Variables
+
+Create a .env.local file in the root directory and add your environment variables for Supabase, Prisma, Inngest, and ArcJet. Example:
+
+```plaintext
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key
+DATABASE_URL=your_database_url
+INNGEST_EVENT_KEY=your_inngest_event_key
+ARCJET_API_KEY=your_arcjet_api_key
+```
+(Update these with your actual keys)
+
+### 4️⃣ Set Up Prisma
+
+```bash
+npx prisma generate
+npx prisma migrate dev --name init
+```
+
+### 5️⃣ Start the Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+or 
+```bash
+yarn dev
+```
+Your app should now be running at http://localhost:3000.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 🔁 Running Inngest Locally
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+To run Inngest’s local development server:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Install Inngest CLI (if not already installed):
+```bash
+npm install -g inngest
+```
+2. Start the Inngest Dev Server:
+```bash
+inngest dev
+```
+3. Ensure your event handlers are correctly registered and running in your Next.js API routes. 
 
-## Learn More
+## 💡 Usage
 
-To learn more about Next.js, take a look at the following resources:
+1. Upload a receipt 📸 → AI scans and fills out transactions automatically.
+   
+2. Set a budget 📊 → Get alerts when you’re close to reaching your limit.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. View AI-generated monthly analysis 🧠 → Get recommendations to save more.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🔮 Future Features
 
-## Deploy on Vercel
+* 🏦 Bank Integration – Sync transactions directly from your bank.
+  
+* 📊 Custom Reports – Generate detailed financial reports.
+  
+* 📅 Automated Bill Reminders – Never miss a due date again.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🙌 Contributors
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+* Farouk Abolaban - [Github](https://github.com/Farouk-Abolaban)
+  
+
+
